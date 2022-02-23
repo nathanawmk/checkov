@@ -8,6 +8,9 @@ Resources:
       Parameters:
         - ParameterName: "enable_user_activity_logging"
           ParameterValue: "true"
+      Tags:
+        - Key: yor_trace
+          Value: 541bd673-bf19-4935-93b8-4367e516eff2
   RedshiftParameterGroupDisabled:
     Type: AWS::Redshift::ClusterParameterGroup
     Properties:
@@ -16,3 +19,6 @@ Resources:
       Parameters:
         - ParameterName: "require_ssl"
           ParameterValue: "false"
+      Tags:
+        - Key: yor_trace
+          Value: 405290fd-4a87-4ecf-8372-64b102d542cd

@@ -5,9 +5,15 @@ Resources:
     Properties:
       Name: "ledger"
       PermissionsMode: "STANDARD"
+      Tags:
+        - Key: yor_trace
+          Value: 1467bd23-a8b8-478e-a7b9-5d1d3a5758c2
   Enabled:
     Type: "AWS::QLDB::Ledger"
     Properties:
       DeletionProtection: true
       Name: "ledger"
       PermissionsMode: "STANDARD"
+      Tags:
+        - Key: yor_trace
+          Value: 078f6246-e7bc-49e4-8f87-bad909fa558a

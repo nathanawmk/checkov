@@ -5,3 +5,6 @@ Resources:
     Properties:
       DomainEndpointOptions:
         EnforceHTTPS: True
+      Tags:
+        - Key: yor_trace
+          Value: 426dd754-c37c-451e-9c78-fbe2b05ca433

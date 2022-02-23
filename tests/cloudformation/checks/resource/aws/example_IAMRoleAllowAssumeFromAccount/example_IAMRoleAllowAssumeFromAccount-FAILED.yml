@@ -13,3 +13,6 @@ Resources:
                   - arn:aws:iam::123456789101:root
             Action:
             - "sts:AssumeRole"
+        Tags:
+          - Key: yor_trace
+            Value: 0c1238d9-5a68-4433-bb39-5d0e580f6dcd

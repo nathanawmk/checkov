@@ -8,3 +8,6 @@ Resources:
       Parameters:
         - ParameterName: "require_ssl"
           ParameterValue: "true"
+      Tags:
+        - Key: yor_trace
+          Value: ed987a47-604a-4164-a343-5d3a59fd373f

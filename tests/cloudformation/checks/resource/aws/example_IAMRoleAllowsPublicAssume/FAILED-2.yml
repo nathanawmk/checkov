@@ -17,7 +17,9 @@ Resources:
               }
             ]
           }
-
+        Tags:
+          - Key: yor_trace
+            Value: 4127c3de-a69b-4a83-9e13-43452d86c6ba
   AWSStarPrincipalInList2:
       Type: AWS::IAM::Role
       Properties:
@@ -34,3 +36,6 @@ Resources:
               }
             ]
           }
+        Tags:
+          - Key: yor_trace
+            Value: 34a80a38-d685-4edb-9cd0-71d6014cb1ba

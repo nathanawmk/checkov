@@ -32,6 +32,9 @@ Resources:
               - 's3:Get*'
               Resource: 
               - '*'        
+      Tags:
+        - Key: yor_trace
+          Value: e37b5f57-b285-43cf-b81b-424670e876fd
   AdminDenyAndPermissionsScoped:
     Type: 'AWS::IAM::Role'
     Properties:
@@ -61,3 +64,6 @@ Resources:
               - 'iam:ChangePassword'
               Resource: 
               - 'foo'
+      Tags:
+        - Key: yor_trace
+          Value: bc3b98a4-39e1-41a3-8de1-c3e36207f5bf

@@ -10,6 +10,9 @@ Resources:
       LoadBalancerAttributes:
         - Key: routing.http.drop_invalid_header_fields.enabled
           Value: "true"
+      Tags:
+        - Key: yor_trace
+          Value: c1d1fbad-d3fa-4d8e-a6de-5c3e7461bb5d
   PassExplicitALB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
@@ -21,6 +24,9 @@ Resources:
       LoadBalancerAttributes:
         - Key: routing.http.drop_invalid_header_fields.enabled
           Value: "true"
+      Tags:
+        - Key: yor_trace
+          Value: df0e76bb-b24f-4c57-b7f9-bc94b21a6b74
   PassMultipleAttributes:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
@@ -34,3 +40,6 @@ Resources:
           Value: "true"
         - Key: routing.http.drop_invalid_header_fields.enabled
           Value: "true"
+      Tags:
+        - Key: yor_trace
+          Value: 362808af-b443-4d35-ac02-b2695c4f36ee

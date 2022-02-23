@@ -8,6 +8,9 @@ Resources:
       Name: test
       Parameters: 
         ttl_monitor: "enabled"
+      Tags:
+        - Key: yor_trace
+          Value: 60b23ac0-c8d4-435c-a5d8-aa0bb7721cfe
   DocDBParameterGroupDisabled:
     Type: AWS::DocDB::DBClusterParameterGroup
     Properties:
@@ -16,3 +19,6 @@ Resources:
       Name: test
       Parameters:
         audit_logs: "disabled"
+      Tags:
+        - Key: yor_trace
+          Value: 663b1ebd-b2c0-4370-8030-7c9eb9f4c227

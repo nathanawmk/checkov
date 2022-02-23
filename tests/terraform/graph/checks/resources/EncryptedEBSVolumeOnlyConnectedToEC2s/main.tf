@@ -4,7 +4,8 @@ resource "aws_instance" "web" {
   instance_type     = "t2.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name      = "HelloWorld"
+    yor_trace = "f7198648-6ad5-4842-84bd-c22bc51ae768"
   }
 }
 
@@ -28,20 +29,32 @@ resource "aws_volume_attachment" "ok_attachment1" {
 
 resource "aws_ebs_volume" "not_ok_ebs1" {
   availability_zone = ""
+  tags = {
+    yor_trace = "33dbe35b-c2c0-427a-9ff5-b3801a9ccf73"
+  }
 }
 
 resource "aws_ebs_volume" "not_ok_ebs2" {
   availability_zone = ""
-  encrypted = false
+  encrypted         = false
+  tags = {
+    yor_trace = "8e6c2a35-a1d8-4b4e-8c55-cce2615d6f12"
+  }
 }
 
 resource "aws_ebs_volume" "ok_ebs1" {
   availability_zone = ""
+  tags = {
+    yor_trace = "132b25cd-b348-46bc-9d52-63c3a6ba9908"
+  }
 }
 
 resource "aws_ebs_volume" "ok_ebs2" {
   availability_zone = ""
-  encrypted = true
+  encrypted         = true
+  tags = {
+    yor_trace = "f259a647-bc22-4ab7-b405-3dfe1fb3fc07"
+  }
 }
 
 

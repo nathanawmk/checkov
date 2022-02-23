@@ -11,3 +11,6 @@ Resources:
       Description: "DAX cluster created with CloudFormation"
       SSESpecification:
         SSEEnabled: true
+      Tags:
+        - Key: yor_trace
+          Value: 675a3dcd-3668-479e-8838-0cffd7e9c364

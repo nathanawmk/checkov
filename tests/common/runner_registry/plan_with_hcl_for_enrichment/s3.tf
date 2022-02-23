@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "test-bucket1" {
   bucket = "test-bucket1"
   # checkov:skip=CKV_AWS_20: The bucket is a public static content host
-  acl    = "public-read"
+  acl = "public-read"
   lifecycle_rule {
     id      = "90 Day Lifecycle"
     enabled = true
@@ -14,4 +14,7 @@ resource "aws_s3_bucket" "test-bucket1" {
     abort_incomplete_multipart_upload_days = 90
   }
   provider = aws.current_region
+  tags = {
+    yor_trace = "75563ddd-ce7d-41d6-9e4e-9fe4a0df1d97"
+  }
 }

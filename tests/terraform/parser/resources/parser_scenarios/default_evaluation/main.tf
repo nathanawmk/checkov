@@ -1,7 +1,7 @@
 locals {
-  dummy_with_dash      = format("-%s", var.dummy_1)
-  dummy_with_comma     = format(":%s", var.dummy_1)
-  bucket_name          = var.bucket_name
+  dummy_with_dash  = format("-%s", var.dummy_1)
+  dummy_with_comma = format(":%s", var.dummy_1)
+  bucket_name      = var.bucket_name
 }
 
 resource "aws_cognito_user_group" "user_group" {
@@ -46,4 +46,7 @@ resource "aws_s3_bucket" "template_bucket" {
   bucket        = local.bucket_name
   acl           = var.acl
   force_destroy = true
+  tags = {
+    yor_trace = "d12379ea-01dc-4e1e-b36a-cd7448e8e0c0"
+  }
 }

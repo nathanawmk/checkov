@@ -27,3 +27,6 @@ Resources:
           MetricsEnabled: true
           DataTraceEnabled: false
           ThrottlingBurstLimit: 555
+      Tags:
+        - Key: yor_trace
+          Value: 0b2f1f5f-a478-4ae6-9c86-696832186d7e

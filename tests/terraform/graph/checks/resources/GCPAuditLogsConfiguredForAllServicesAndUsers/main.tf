@@ -1,21 +1,33 @@
 resource "google_project" "project_good" {
-  name = "good"
+  name       = "good"
   project_id = "123456"
+  labels = {
+    yor_trace = "06caad6b-bb49-414d-9d33-25d247bbf30d"
+  }
 }
 
 resource "google_project" "project_bad_1" {
-  name = "bad1"
+  name       = "bad1"
   project_id = "123456"
+  labels = {
+    yor_trace = "bb3776f0-190c-400b-9c31-4b8cbdca19de"
+  }
 }
 
 resource "google_project" "project_bad_2" {
-  name = "bad2"
+  name       = "bad2"
   project_id = "123456"
+  labels = {
+    yor_trace = "b39aaaa5-7cda-4197-b069-985837f217a4"
+  }
 }
 
 resource "google_project" "project_bad_3" {
-  name = "bad3"
+  name       = "bad3"
   project_id = "123456"
+  labels = {
+    yor_trace = "35a466eb-d5ad-419e-a03d-46f22c8092bb"
+  }
 }
 
 resource "google_project_iam_audit_config" "project_good_audit" {

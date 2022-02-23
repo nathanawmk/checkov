@@ -19,6 +19,9 @@ Resources:
           EFSVolumeConfiguration:
             FilesystemId: FilesystemId
             TransitEncryption: "ENABLED"
+      Tags:
+        - Key: yor_trace
+          Value: 37bfe7a8-ece8-412e-b858-6c79f1685dd1
   Resource1:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -33,6 +36,9 @@ Resources:
           Command: 
             - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
           Essential: true
+      Tags:
+        - Key: yor_trace
+          Value: d7bb7bdf-c74d-40d0-bf56-0927ab8341a0
   Resource2:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -51,3 +57,6 @@ Resources:
         - Name: MyVolume
           Host:
             SourcePath: "/source/path"
+      Tags:
+        - Key: yor_trace
+          Value: 78df5859-1de7-4e83-8845-f3fb0bcaa48f

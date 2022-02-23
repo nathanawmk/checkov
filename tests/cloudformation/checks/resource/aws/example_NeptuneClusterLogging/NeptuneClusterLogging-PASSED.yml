@@ -5,3 +5,6 @@ Resources:
     Properties:
       DBClusterIdentifier: DBClusterIdentifier
       EnableCloudwatchLogsExports: ["audit"]
+      Tags:
+        - Key: yor_trace
+          Value: d4ff0cb4-3fdd-417e-bed4-60ddfaee2982

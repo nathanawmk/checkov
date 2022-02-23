@@ -6,6 +6,9 @@ resource "aws_s3_bucket" "financials" {
   bucket        = "${local.resource_prefix.value}-financials"
   acl           = "private"
   force_destroy = true
+  tags = {
+    yor_trace = "297a47d7-ef37-43a5-b581-eddf204632a2"
+  }
 }
 
 resource "aws_s3_bucket" "operations" {
@@ -13,9 +16,10 @@ resource "aws_s3_bucket" "operations" {
   bucket        = "${local.resource_prefix.value}-operations"
   acl           = "private"
   force_destroy = true
-  tags          = {
+  tags = {
     Name        = "${local.resource_prefix.value}-operations"
     Environment = "418408045322-acme-dev"
+    yor_trace   = "099d4e88-e498-4b41-8c99-b390262b5d7a"
   }
 }
 
@@ -27,6 +31,7 @@ resource "aws_s3_bucket" "hello" {
   tags = {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
+    yor_trace   = "605e586c-5340-42a1-8968-c75cf2082694"
   }
 }
 
@@ -36,9 +41,9 @@ resource "aws_instance" "web_host" {
   instance_type = "t2.nano"
 
   vpc_security_group_ids = [
-    "${aws_security_group.web-node.id}"]
-  subnet_id              = "${aws_subnet.web_subnet.id}"
-  user_data              = <<EOF
+  "${aws_security_group.web-node.id}"]
+  subnet_id = "${aws_subnet.web_subnet.id}"
+  user_data = <<EOF
 #! /bin/bash
 sudo apt-get update
 sudo apt-get install -y apache2
@@ -49,7 +54,8 @@ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMAAAKEY
 export AWS_DEFAULT_REGION=us-west-2
 echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
-  tags                   = {
-    Name = "${local.resource_prefix.value}-ec2"
+  tags = {
+    Name      = "${local.resource_prefix.value}-ec2"
+    yor_trace = "7a2b78a0-ef09-45a4-8a1a-1df176bcf66f"
   }
 }

@@ -3,6 +3,9 @@ resource "aws_iam_role" "replication" {
 
   name               = format("%s-replication", module.this.id)
   assume_role_policy = data.aws_iam_policy_document.replication_sts[0].json
+  tags = {
+    yor_trace = "c770d1a3-0ad0-45d2-bbf8-affee38bd65a"
+  }
 }
 
 data "aws_iam_policy_document" "replication_sts" {
@@ -27,6 +30,9 @@ resource "aws_iam_policy" "replication" {
 
   name   = format("%s-replication", module.this.id)
   policy = data.aws_iam_policy_document.replication[0].json
+  tags = {
+    yor_trace = "fc32f92c-f5ff-498d-8e6a-a8cfd0225edb"
+  }
 }
 
 data "aws_iam_policy_document" "replication" {

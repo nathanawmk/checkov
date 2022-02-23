@@ -4,3 +4,6 @@ Resources:
     Type: AWS::Timestream::Database
     Properties:
       DatabaseName: timestream
+      Tags:
+        - Key: yor_trace
+          Value: 297969ca-de12-4d89-a88e-68787da6281f

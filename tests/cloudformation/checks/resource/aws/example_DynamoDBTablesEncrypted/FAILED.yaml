@@ -14,6 +14,9 @@ Resources:
           KeyType: "HASH"
       SSESpecification:
         SSEEnabled: true
+      Tags:
+        - Key: yor_trace
+          Value: a87efa02-9fa2-4deb-9bfa-751198a1cffa
   EncryptionFalse: 
     Type: AWS::DynamoDB::Table
     Properties:
@@ -28,6 +31,9 @@ Resources:
           KeyType: "HASH"
       SSESpecification:
         SSEEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: 970973ec-36ae-4326-a93d-696bbf2dd42c
   NoEncryptionConfig: 
     Type: AWS::DynamoDB::Table
     Properties:
@@ -40,3 +46,6 @@ Resources:
         - 
           AttributeName: "Test"
           KeyType: "HASH"
+      Tags:
+        - Key: yor_trace
+          Value: 4536021e-b72e-4f6a-bdeb-22714519c963

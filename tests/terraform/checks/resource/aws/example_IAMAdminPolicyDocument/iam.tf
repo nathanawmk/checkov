@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "pass1" {
-  name = "pass1"
-  path = "/"
+  name   = "pass1"
+  path   = "/"
   policy = <<POLICY
 {
   "Statement": [
@@ -29,6 +29,9 @@ resource "aws_iam_policy" "pass1" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "0a2f1636-cc3d-4f33-94aa-fdc01384cfb9"
+  }
 }
 
 resource "aws_iam_policy" "fail1" {
@@ -55,11 +58,14 @@ resource "aws_iam_policy" "fail1" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "bc58d115-5dd2-4598-a4cc-f35da53e914d"
+  }
 }
 
 resource "aws_iam_policy" "fail2" {
-  name = "fail2"
-  path = "/"
+  name   = "fail2"
+  path   = "/"
   policy = <<POLICY
 {
   "Statement": [
@@ -77,11 +83,14 @@ resource "aws_iam_policy" "fail2" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "308d9d21-827f-4635-94cc-c452d6827e0d"
+  }
 }
 
 resource "aws_iam_policy" "fail3" {
-  name = "fail3"
-  path = "/"
+  name   = "fail3"
+  path   = "/"
   policy = <<POLICY
 {
   "Statement": [
@@ -95,6 +104,9 @@ resource "aws_iam_policy" "fail3" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "5670529e-89ef-45fb-908c-072356810fd8"
+  }
 }
 
 resource "aws_iam_policy" "fail4" {
@@ -113,6 +125,9 @@ resource "aws_iam_policy" "fail4" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "d9bd9704-1c87-41bb-b65e-bfab15e7f074"
+  }
 }
 
 resource "aws_iam_policy" "pass2" {
@@ -132,4 +147,7 @@ resource "aws_iam_policy" "pass2" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "4e3a6a83-a240-43ec-95ba-0146159cd4b1"
+  }
 }

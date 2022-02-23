@@ -13,3 +13,6 @@ Resources:
               - ec2.amazonaws.com
             Action:
               - 'sts:AssumeRole'
+        Tags:
+          - Key: yor_trace
+            Value: 42d86a51-60c7-4266-9961-6f9a3f33b934

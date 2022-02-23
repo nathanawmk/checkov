@@ -16,3 +16,6 @@ Resources:
       Description: Invoke a function during stack creation.
       TracingConfig:
         Mode: Active
+      Tags:
+        - Key: yor_trace
+          Value: 0d750922-4c65-454e-a7a3-7d1879b5d67d

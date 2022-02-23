@@ -19,6 +19,9 @@ Resources:
           EFSVolumeConfiguration:
             FilesystemId: FilesystemId
             TransitEncryption: "DISABLED"
+      Tags:
+        - Key: yor_trace
+          Value: b60731ef-7fe8-46ef-8293-fee20b941ab3
   Resource1:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -37,3 +40,6 @@ Resources:
         - Name: MyVolume
           EFSVolumeConfiguration:
             FilesystemId: FilesystemId
+      Tags:
+        - Key: yor_trace
+          Value: e5ddbb5b-6cbb-44ed-96d9-71fa5ad2a463

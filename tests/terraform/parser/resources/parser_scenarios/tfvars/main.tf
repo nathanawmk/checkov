@@ -16,4 +16,7 @@ variable "other_var_3" {
 
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "${var.only_here}-${var.foo}-${var.list_data[0]}-${var.map_data[stage]}-${var.other_var_1}-${var.other_var_2}-${var.other_var_3}"
+  tags = {
+    yor_trace = "870dd660-102b-4fbf-b731-434cf8b38538"
+  }
 }

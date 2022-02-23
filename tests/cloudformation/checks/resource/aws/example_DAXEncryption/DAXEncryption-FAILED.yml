@@ -9,3 +9,6 @@ Resources:
       ReplicationFactor: 1
       IAMRoleARN: "arn:aws:iam::111122223333:role/DaxAccess"
       Description: "DAX cluster created with CloudFormation"
+      Tags:
+        - Key: yor_trace
+          Value: 6ccbf4bc-26d8-4052-b1fa-23a2b06bdb25

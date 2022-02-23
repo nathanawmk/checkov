@@ -8,6 +8,9 @@ resource "aws_cloudtrail" "tfer--cashdash_trail" {
   name                          = "cashdash_trail"
   s3_bucket_name                = "cashdash-trail"
   sns_topic_name                = "arn:aws:sns:us-east-1:098885917934:clodtrail-sns-topic"
+  tags = {
+    yor_trace = "b3539c3e-1edd-46fc-a8bf-c8bbb70c1356"
+  }
 }
 
 resource "google_compute_instance" "tfer--sentry-002D-v1" {
@@ -36,7 +39,7 @@ resource "google_compute_instance" "tfer--sentry-002D-v1" {
     block-project-ssh-keys = "true"
     some-other-attribute   = "false"
   }
-  name                    = "sentry-v1"
+  name = "sentry-v1"
   network_interface {
     access_config {
       nat_ip       = "34.106.48.192"
@@ -64,4 +67,7 @@ resource "google_compute_instance" "tfer--sentry-002D-v1" {
   }
   tags = ["allow-ssh", "allow-sentry"]
   zone = "us-west3-b"
+  labels = {
+    yor_trace = "441a159c-c93a-4336-8f2b-005c6bcf4165"
+  }
 }

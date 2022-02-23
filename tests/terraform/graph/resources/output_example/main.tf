@@ -8,6 +8,7 @@ resource "aws_subnet" "my_subnet" {
   availability_zone = "us-west-2a"
 
   tags = {
-    Name = "tf-example"
+    Name      = "tf-example"
+    yor_trace = "6178816b-20e8-4698-a48b-3ccb780cfa24"
   }
 }

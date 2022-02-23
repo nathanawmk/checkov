@@ -11,6 +11,9 @@ resource "azurerm_kusto_cluster" "cluster_ok" {
   identity {
     type = "SystemAssigned"
   }
+  tags = {
+    yor_trace = "d851f0cd-cabe-4c14-8d46-9d52fdf3741b"
+  }
 }
 
 resource "azurerm_kusto_cluster_customer_managed_key" "example" {
@@ -33,5 +36,8 @@ resource "azurerm_kusto_cluster" "cluster_ok_not_ok" {
 
   identity {
     type = "SystemAssigned"
+  }
+  tags = {
+    yor_trace = "d53837a2-c9ea-4399-b38b-7dd6b0f6167b"
   }
 }

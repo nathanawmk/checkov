@@ -6,8 +6,14 @@ Resources:
       RepositoryName: "test"
       EncryptionConfiguration:
         EncryptionType: "AES256"
+      Tags:
+        - Key: yor_trace
+          Value: b2a2a2fc-53d1-4548-9c58-fcf98df01e46
   NoEncryption:
     Type: AWS::ECR::Repository
     Properties: 
       RepositoryName: "test"
+      Tags:
+        - Key: yor_trace
+          Value: 6bf9ccd1-ca0b-4a93-ae97-4dfc3727a87b
 

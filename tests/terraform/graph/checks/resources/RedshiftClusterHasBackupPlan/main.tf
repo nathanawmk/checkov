@@ -5,6 +5,9 @@ resource "aws_redshift_cluster" "redshift_good" {
   master_password    = "Mustbe8characters"
   node_type          = "dc1.large"
   cluster_type       = "single-node"
+  tags = {
+    yor_trace = "cb232f86-54bf-44f0-bfad-7af5364a2ff5"
+  }
 }
 
 resource "aws_redshift_cluster" "redshift_bad" {
@@ -14,6 +17,9 @@ resource "aws_redshift_cluster" "redshift_bad" {
   master_password    = "Mustbe8characters"
   node_type          = "dc1.large"
   cluster_type       = "single-node"
+  tags = {
+    yor_trace = "a732ff9b-2dac-441b-bc03-cea6970100e3"
+  }
 }
 
 resource "aws_backup_plan" "example" {
@@ -23,6 +29,9 @@ resource "aws_backup_plan" "example" {
     rule_name         = "tf_example_backup_rule"
     target_vault_name = "vault-name"
     schedule          = "cron(0 12 * * ? *)"
+  }
+  tags = {
+    yor_trace = "907c3b36-7279-451f-9273-4d539a4ca7ba"
   }
 }
 

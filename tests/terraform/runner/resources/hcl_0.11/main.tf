@@ -15,5 +15,6 @@ resource "aws_db_instance" "test_db" {
   multi_az                = "false"
   tags = {
     workload-type = "other"
+    yor_trace     = "020aa67f-452b-4ab8-a0b2-d09f770cd05a"
   }
 }
