@@ -11,8 +11,9 @@ Resources:
       Tags:
         - Key: MyTag
           Value: TagValue
+        - Key: yor_trace
+          Value: 6fed8c9f-42d6-4c96-bb1a-7aa594352c9e
     DeletionPolicy: Snapshot
-
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
@@ -26,6 +27,8 @@ Resources:
         -
           Key: Name
           Value: webserver
+        - Key: yor_trace
+          Value: b54ed788-3f15-4ad9-a048-f764d83d9a1b
       BlockDeviceMappings:
         # Create a separate volume
         - DeviceName: /dev/sda11

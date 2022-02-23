@@ -21,3 +21,6 @@ Resources:
           "user":"$context.identity.user","requestTime":"$context.requestTime",
           "eventType":"$context.eventType","routeKey":"$context.routeKey",
           "status":"$context.status","connectionId":"$context.connectionId"}
+      Tags:
+        - Key: yor_trace
+          Value: b8584ed2-adff-4248-8f59-d087a90208b7

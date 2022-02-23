@@ -10,3 +10,6 @@ Resources:
       Environment:
         Variables:
           key: value
+      Tags:
+        - Key: yor_trace
+          Value: 233de21f-26d6-47d5-8885-72d58874e2a9

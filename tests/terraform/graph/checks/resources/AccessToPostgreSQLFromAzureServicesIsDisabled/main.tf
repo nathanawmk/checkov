@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "bb72a847-7e8a-44f7-8c64-ad5f82e31516"
+  }
 }
 
 resource "azurerm_sql_server" "sql_server_good" {
@@ -10,6 +13,9 @@ resource "azurerm_sql_server" "sql_server_good" {
   version                      = "12.0"
   administrator_login          = "4dm1n157r470r"
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
+  tags = {
+    yor_trace = "6e136690-2797-4e47-9f12-b424a751aaa5"
+  }
 }
 
 resource "azurerm_sql_server" "sql_server_bad" {
@@ -19,6 +25,9 @@ resource "azurerm_sql_server" "sql_server_bad" {
   version                      = "12.0"
   administrator_login          = "4dm1n157r470r"
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
+  tags = {
+    yor_trace = "24cf0d1b-0cf7-462c-a023-d989111f2f5d"
+  }
 }
 
 

@@ -7,6 +7,9 @@ Resources:
       MasterUserPassword: password
       StorageEncrypted: false
       EnableCloudwatchLogsExports: ["profiler"]
+      Tags:
+        - Key: yor_trace
+          Value: 8d0122f8-c79d-4f6d-9786-9df3fd63c5f4
   DocDBAudit:
     Type: AWS::DocDB::DBCluster
     Properties:
@@ -14,9 +17,15 @@ Resources:
       MasterUserPassword: password
       StorageEncrypted: false
       EnableCloudwatchLogsExports: ["audit"]
+      Tags:
+        - Key: yor_trace
+          Value: 2f826af5-d06e-4993-a69a-299b3425ba3c
   DocDBDefault:
     Type: AWS::DocDB::DBCluster
     Properties:
       MasterUsername: name
       MasterUserPassword: password
       StorageEncrypted: false
+      Tags:
+        - Key: yor_trace
+          Value: 71343905-472d-4461-a80e-9ecbcf2b98de

@@ -6,3 +6,6 @@ Resources:
       MasterUsername: name
       MasterUserPassword: password
       StorageEncrypted: true
+      Tags:
+        - Key: yor_trace
+          Value: 4adb458d-f27a-4720-9f36-923466c1f883

@@ -20,3 +20,6 @@ Resources:
           Action: kms:*
           Resource: '*'
       EnableKeyRotation: true
+      Tags:
+        - Key: yor_trace
+          Value: cdb809ae-0247-40d4-ab64-2c8256372149

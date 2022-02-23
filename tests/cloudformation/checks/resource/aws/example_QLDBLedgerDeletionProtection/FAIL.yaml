@@ -6,3 +6,6 @@ Resources:
       DeletionProtection: false
       Name: "ledger"
       PermissionsMode: "STANDARD"
+      Tags:
+        - Key: yor_trace
+          Value: d2816eb1-e7e5-4582-9ab8-8f11104ddc20

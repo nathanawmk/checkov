@@ -4,7 +4,9 @@ resource "aws_s3_bucket" "default" {
   acl           = try(length(var.grants), 0) == 0 ? var.acl : null
   force_destroy = var.force_destroy
   policy        = var.policy
-  tags          = module.this.tags
+  tags = merge(module.this.tags, {
+    yor_trace = "a3b6720f-49ec-4525-942d-a6562ad305ec"
+  })
 
   versioning {
     enabled = var.versioning_enabled

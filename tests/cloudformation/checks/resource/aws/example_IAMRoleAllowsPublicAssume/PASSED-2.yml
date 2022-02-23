@@ -16,6 +16,9 @@ Resources:
               }
             ]
           }
+        Tags:
+          - Key: yor_trace
+            Value: f9deb5db-3633-48d4-be22-bcd9dfb11de8
   DenyIgnore2:
       Type: AWS::IAM::Role
       Properties:
@@ -31,3 +34,6 @@ Resources:
              }
            ]
           }
+        Tags:
+          - Key: yor_trace
+            Value: 9781672d-c82e-46eb-a08c-9402743a8493

@@ -59,6 +59,8 @@ Resources:
       Tags:
         - Key: foo
           Value: bar
+        - Key: yor_trace
+          Value: 2f8b2826-98df-465a-921d-280503ead9e2
       VPCOptions:
         SubnetIds:
           - !Ref subnet
@@ -69,12 +71,18 @@ Resources:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
+      Tags:
+        - Key: yor_trace
+          Value: f39facc5-c0e9-4039-9f26-9cbcd8b52b7a
   subnet:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref vpc
       CidrBlock: !Ref CidrBlock
       AvailabilityZone: !Ref AvailabilityZone
+      Tags:
+        - Key: yor_trace
+          Value: d79cd675-d7a5-4e56-aa3b-0a2406c36bc1
   #mySecurityGroup:
   #  Type: AWS::EC2::SecurityGroup
   #  Properties:

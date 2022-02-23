@@ -14,3 +14,6 @@ Resources:
       BucketName: !Ref BucketName
       VersioningConfiguration:
         Status: !Ref Status
+      Tags:
+        - Key: yor_trace
+          Value: e6f7ccf0-b4e1-43a8-8cc0-9a1e431b2de8

@@ -10,4 +10,7 @@ resource "aws_s3_bucket" "bucket_with_versioning" {
       }
     }
   }
+  tags = {
+    yor_trace = "7645fead-3940-4cd8-8fd7-b176a8c4e529"
+  }
 }

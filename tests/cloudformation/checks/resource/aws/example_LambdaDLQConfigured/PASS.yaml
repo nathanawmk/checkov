@@ -11,3 +11,6 @@ Resources:
       Runtime: python3.8
       DeadLetterConfig:
         TargetArn: arn:aws:sqs:eu-central-1:123456789012:dlq
+      Tags:
+        - Key: yor_trace
+          Value: 8fa9a7c2-6ebf-453a-a891-059ffea16dfe

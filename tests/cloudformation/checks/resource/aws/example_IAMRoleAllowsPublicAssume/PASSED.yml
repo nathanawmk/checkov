@@ -13,6 +13,9 @@ Resources:
               - ec2.amazonaws.com
             Action:
               - 'sts:AssumeRole'
+        Tags:
+          - Key: yor_trace
+            Value: a99b4d48-6b30-4d22-ae2e-338e5893a34a
   DenyIgnore:
       Type: AWS::IAM::Role
       Properties:
@@ -25,3 +28,6 @@ Resources:
                   - "*"
             Action:
             - "sts:AssumeRole"
+        Tags:
+          - Key: yor_trace
+            Value: fdb2aabd-2f14-44e9-942c-49a83ce2af6a

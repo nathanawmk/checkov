@@ -22,6 +22,9 @@ resource "azurerm_storage_account" "ok_account_1" {
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  tags = {
+    yor_trace = "8c2fcfdb-985e-4d69-bb61-9541a6602c3d"
+  }
 }
 
 resource "azurerm_storage_account" "ok_account_2" {
@@ -30,6 +33,9 @@ resource "azurerm_storage_account" "ok_account_2" {
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  tags = {
+    yor_trace = "293d1850-58af-4a53-81fa-482f37fd3bd4"
+  }
 }
 
 resource "azurerm_storage_account" "not_ok_account" {
@@ -38,6 +44,9 @@ resource "azurerm_storage_account" "not_ok_account" {
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  tags = {
+    yor_trace = "ee513480-5acb-4f11-b47e-a17ac633ee2c"
+  }
 }
 
 resource "azurerm_monitor_activity_log_alert" "ok_monitor_activity_log_alert_1" {
@@ -59,6 +68,9 @@ resource "azurerm_monitor_activity_log_alert" "ok_monitor_activity_log_alert_1" 
     webhook_properties = {
       from = "terraform"
     }
+  }
+  tags = {
+    yor_trace = "82f79a56-9d06-48b6-95f3-05ad9b28009f"
   }
 }
 
@@ -83,6 +95,9 @@ resource "azurerm_monitor_activity_log_alert" "ok_monitor_activity_log_alert_2" 
       from = "terraform"
     }
   }
+  tags = {
+    yor_trace = "a18db649-d6b3-401f-8f24-fe9b79859e90"
+  }
 }
 
 resource "azurerm_monitor_activity_log_alert" "not_ok_monitor_activity_log_alert" {
@@ -104,5 +119,8 @@ resource "azurerm_monitor_activity_log_alert" "not_ok_monitor_activity_log_alert
     webhook_properties = {
       from = "terraform"
     }
+  }
+  tags = {
+    yor_trace = "8cfc1a6f-ef0a-4833-8cbd-f8694328b63a"
   }
 }

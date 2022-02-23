@@ -5,3 +5,6 @@ Resources:
     Properties: 
       PubliclyAccessible: False
       ReplicationInstanceClass: dms.c4.large
+      Tags:
+        - Key: yor_trace
+          Value: 9364bc99-a14f-4765-9a4a-68c8877ec1c8

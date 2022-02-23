@@ -7,3 +7,6 @@ Resources:
       EncryptionConfiguration:
         EncryptionType: "KMS"
         KmsKey: "KeyID"
+      Tags:
+        - Key: yor_trace
+          Value: 253c19b2-b902-424c-a5fa-434f18ffdc10

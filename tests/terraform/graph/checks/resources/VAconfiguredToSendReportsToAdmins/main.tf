@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "okLegacyExample" {
   name     = "okLegacyExample-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "f977ea59-0596-468e-9696-97b02d2c883e"
+  }
 }
 
 resource "azurerm_sql_server" "okLegacyExample" {
@@ -10,6 +13,9 @@ resource "azurerm_sql_server" "okLegacyExample" {
   version                      = "12.0"
   administrator_login          = "4dm1n157r470r"
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
+  tags = {
+    yor_trace = "8778c546-b56b-4792-ba08-47024eb49c91"
+  }
 }
 
 resource "azurerm_storage_account" "okLegacyExample" {
@@ -18,6 +24,9 @@ resource "azurerm_storage_account" "okLegacyExample" {
   location                 = azurerm_resource_group.okLegacyExample.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  tags = {
+    yor_trace = "1eb24e21-6406-46e2-b6de-20056d933224"
+  }
 }
 
 resource "azurerm_storage_container" "okLegacyExample" {
@@ -50,6 +59,9 @@ resource "azurerm_mssql_server_vulnerability_assessment" "okLegacyExample" {
 resource "azurerm_resource_group" "okExample" {
   name     = "okExample-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "dce37ca5-f9f0-4f74-80dc-3604f11b6459"
+  }
 }
 
 resource "azurerm_mssql_server" "okExample" {
@@ -59,6 +71,9 @@ resource "azurerm_mssql_server" "okExample" {
   version                      = "12.0"
   administrator_login          = "4dm1n157r470r"
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
+  tags = {
+    yor_trace = "2d1dd94d-98d8-417f-b7cf-5fa5c4b34007"
+  }
 }
 
 resource "azurerm_storage_account" "okExample" {
@@ -67,6 +82,9 @@ resource "azurerm_storage_account" "okExample" {
   location                 = azurerm_resource_group.okExample.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  tags = {
+    yor_trace = "3242ae87-c4a7-41f7-aa27-63b8f4ab4d37"
+  }
 }
 
 resource "azurerm_storage_container" "okExample" {
@@ -99,6 +117,9 @@ resource "azurerm_mssql_server_vulnerability_assessment" "okExample" {
 resource "azurerm_resource_group" "badExample" {
   name     = "database-rg"
   location = "West Europe"
+  tags = {
+    yor_trace = "2405f929-bc83-45db-a00e-c23261128447"
+  }
 }
 
 resource "azurerm_storage_account" "badExample" {
@@ -107,6 +128,9 @@ resource "azurerm_storage_account" "badExample" {
   location                 = azurerm_resource_group.badExample.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  tags = {
+    yor_trace = "b5759e57-d666-4573-8624-3c688018d6d7"
+  }
 }
 
 resource "azurerm_sql_server" "badExample" {
@@ -126,6 +150,7 @@ resource "azurerm_sql_server" "badExample" {
 
   tags = {
     environment = "production"
+    yor_trace   = "e87f310a-d804-4237-b41f-bd93ed95dc74"
   }
 }
 
